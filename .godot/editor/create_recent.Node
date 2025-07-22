@@ -1,1 +1,5 @@
+CollisionShape2D
+TileMapLayer
+Sprite2D
+CharacterBody2D
 Node

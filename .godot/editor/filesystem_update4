@@ -1,0 +1,5 @@
+res://src/scenes/game/game.tscn
+res://resources/tileset/atlas.tres
+res://src/scenes/entities/frogger/frogger.gd
+res://src/scenes/entities/frogger/frogger.tscn
+res://resources/tileset/tileset.tres

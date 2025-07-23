@@ -1,3 +1,11 @@
+res://src/autoloads
+res://src/scenes/entities/lilypad
+res://src/scenes/entities/obstacles/log
+res://src/scenes/entities/obstacles/snake
+res://src/scenes/entities/obstacles/turtle
+res://src/scenes/entities/obstacles/cat
+res://src/scenes/managers
+res://src/scenes/entities/obstacles
 res://assets/tilemap
 res://resources/tileset
 res://src/scenes/entities/frogger

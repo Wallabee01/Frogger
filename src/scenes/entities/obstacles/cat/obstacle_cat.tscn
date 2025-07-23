@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://npa5phscgawb"]
+
+[ext_resource type="Script" uid="uid://cki1g7w4u2kn6" path="res://src/scenes/entities/obstacles/cat/obstacle_cat.gd" id="1_70raf"]
+[ext_resource type="Texture2D" uid="uid://36tc21fe60fi" path="res://assets/obstacles/cat/cat.png" id="1_qw7id"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_70raf"]
+size = Vector2(24, 16)
+
+[node name="ObstacleCat" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_70raf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qw7id")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_70raf")

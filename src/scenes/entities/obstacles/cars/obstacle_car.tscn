@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://lisp2vqo8bxe"]
+
+[ext_resource type="Script" uid="uid://4rclxagyj0ds" path="res://src/scenes/entities/obstacles/cars/obstacle_car.gd" id="1_dknrp"]
+[ext_resource type="Texture2D" uid="uid://cvxl4wdcj4r2b" path="res://assets/obstacles/cars/car.png" id="2_1skan"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ccl63"]
+size = Vector2(32, 16)
+
+[node name="ObstacleCar" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_dknrp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ccl63")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1skan")

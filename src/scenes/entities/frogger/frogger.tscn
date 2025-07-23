@@ -1,12 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://uw6fguongrq5"]
+[gd_scene load_steps=5 format=3 uid="uid://uw6fguongrq5"]
 
 [ext_resource type="Script" uid="uid://dirtkmk6nfoic" path="res://src/scenes/entities/frogger/frogger.gd" id="1_erwt6"]
 [ext_resource type="Texture2D" uid="uid://dxq7yp0vq7qdm" path="res://assets/frogger/frogger.png" id="1_py0tf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prngh"]
-size = Vector2(16, 16)
+size = Vector2(12, 12)
 
-[node name="Frogger" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_erwt6"]
+size = Vector2(12, 12)
+
+[node name="Frogger" type="CharacterBody2D" groups=["Frogger"]]
+collision_layer = 2
+collision_mask = 0
+motion_mode = 1
 script = ExtResource("1_erwt6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -14,3 +20,12 @@ texture = ExtResource("1_py0tf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_prngh")
+
+[node name="DeathArea2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathArea2D"]
+shape = SubResource("RectangleShape2D_erwt6")
+
+[connection signal="body_entered" from="DeathArea2D" to="." method="_on_death_area_2d_body_entered"]

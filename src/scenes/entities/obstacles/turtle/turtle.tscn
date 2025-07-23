@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1ajgeimlo1s7"]
+
+[ext_resource type="Script" uid="uid://d3pd2cdhy4uvj" path="res://src/scenes/entities/obstacles/turtle/turtle.gd" id="1_784wq"]
+[ext_resource type="Texture2D" uid="uid://c1q0crfnp01qw" path="res://assets/obstacles/turtle/turtle.png" id="1_yb4dd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_784wq"]
+size = Vector2(68, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oybjx"]
+size = Vector2(68, 16)
+
+[node name="Turtle" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_784wq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_784wq")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-23, 0)
+texture = ExtResource("1_yb4dd")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("1_yb4dd")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(23, 0)
+texture = ExtResource("1_yb4dd")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_oybjx")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

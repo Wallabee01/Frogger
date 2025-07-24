@@ -11,10 +11,10 @@ func init(speed: float):
 		
 		var rng = randf()
 		if rng >= 0 && rng < 0.25:
-			modulate = color_yellow
+			$Sprite2D.modulate = color_yellow
 		elif rng >= 0.25 && rng < 0.50:
-			modulate = color_red
+			$Sprite2D.modulate = color_red
 		elif rng >= 0.50 && rng < 0.75:
-			modulate = color_orange
+			$Sprite2D.modulate = color_orange
 		elif rng >= 0.75 && rng <= 1.0:
-			modulate = color_green
+			$Sprite2D.modulate = color_green

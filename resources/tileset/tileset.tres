@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bx1rbsf6i0xey"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://bx1rbsf6i0xey"]
 
 [ext_resource type="Texture2D" uid="uid://ctx4irp7cl8xq" path="res://assets/tilemap/tilemap.png" id="1_gr1vc"]
+[ext_resource type="Texture2D" uid="uid://dshecdn33sb7n" path="res://assets/tilemap/water_sheet.png" id="2_t4mfu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t4mfu"]
 texture = ExtResource("1_gr1vc")
@@ -12,5 +13,22 @@ texture = ExtResource("1_gr1vc")
 5:0/0 = 0
 6:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_174x8"]
+texture = ExtResource("2_t4mfu")
+use_texture_padding = false
+0:0/animation_columns = 9
+0:0/animation_speed = 7.5
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/animation_frame_8/duration = 1.0
+0:0/0 = 0
+
 [resource]
 sources/0 = SubResource("TileSetAtlasSource_t4mfu")
+sources/2 = SubResource("TileSetAtlasSource_174x8")

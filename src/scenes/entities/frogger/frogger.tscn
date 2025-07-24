@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://uw6fguongrq5"]
+[gd_scene load_steps=7 format=3 uid="uid://uw6fguongrq5"]
 
 [ext_resource type="Script" uid="uid://dirtkmk6nfoic" path="res://src/scenes/entities/frogger/frogger.gd" id="1_erwt6"]
 [ext_resource type="Texture2D" uid="uid://dxq7yp0vq7qdm" path="res://assets/frogger/frogger.png" id="1_py0tf"]
+[ext_resource type="AudioStream" uid="uid://q81wxptau7ha" path="res://assets/audio/sfx/jump3.ogg" id="2_cmjk6"]
+[ext_resource type="AudioStream" uid="uid://dowv2k7bqd3th" path="res://assets/audio/sfx/gameover4.ogg" id="3_a3ge5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prngh"]
 size = Vector2(12, 12)
@@ -14,6 +16,19 @@ collision_layer = 2
 collision_mask = 0
 motion_mode = 1
 script = ExtResource("1_erwt6")
+
+[node name="JumpStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_cmjk6")
+volume_db = -5.0
+
+[node name="DeathStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
+[node name="GameOverStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_a3ge5")
+volume_db = -5.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_py0tf")

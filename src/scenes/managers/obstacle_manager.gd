@@ -22,7 +22,7 @@ func spawn_obstacles():
 	obstacle_instance.global_position = global_position
 	obstacle_instance.init(speed)
 	if is_flipped:
-		obstacle_instance.flip_sprite()
+		obstacle_instance.flip()
 	
 
 

@@ -1,10 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://lisp2vqo8bxe"]
+[gd_scene load_steps=10 format=3 uid="uid://lisp2vqo8bxe"]
 
 [ext_resource type="Script" uid="uid://4rclxagyj0ds" path="res://src/scenes/entities/obstacles/cars/obstacle_car.gd" id="1_dknrp"]
 [ext_resource type="Texture2D" uid="uid://cvxl4wdcj4r2b" path="res://assets/obstacles/cars/car.png" id="2_1skan"]
+[ext_resource type="Texture2D" uid="uid://nkm0nkegdx20" path="res://assets/particles/explosion_particle.png" id="3_0pr8f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ccl63"]
 size = Vector2(32, 16)
+
+[sub_resource type="Gradient" id="Gradient_l1xvn"]
+offsets = PackedFloat32Array(0.197802, 1)
+colors = PackedColorArray(0.578125, 0.578125, 0.578125, 1, 1, 1, 1, 0.145098)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6qdcu"]
+gradient = SubResource("Gradient_l1xvn")
+
+[sub_resource type="Curve" id="Curve_0pr8f"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_l1xvn"]
+curve = SubResource("Curve_0pr8f")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_djatk"]
+particle_flag_disable_z = true
+angle_min = 1.07288e-05
+angle_max = 10.0
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 0, 0)
+scale_min = 0.2
+scale_max = 0.3
+scale_curve = SubResource("CurveTexture_l1xvn")
+color_ramp = SubResource("GradientTexture1D_6qdcu")
 
 [node name="ObstacleCar" type="RigidBody2D"]
 collision_layer = 4
@@ -14,6 +40,15 @@ script = ExtResource("1_dknrp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ccl63")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(16, 4)
+amount = 40
+texture = ExtResource("3_0pr8f")
+lifetime = 0.15
+fixed_fps = 0
+interpolate = false
+process_material = SubResource("ParticleProcessMaterial_djatk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_1skan")

@@ -1,0 +1,14 @@
+res://resources/tileset/atlas.tres::4f2ae7b2c1142f8d91e897123917932b::1753141038::res://.godot/exported/133200997/export-ff47e45a8869f9d4b43537e71e381c34-atlas.res
+res://resources/tileset/tileset.tres::7b0b8d0118634db6ecc7a89398cee14e::1753310228::res://.godot/exported/133200997/export-2b94c54f003eb630d4770f1315fcaa88-tileset.res
+res://resources/ui/themes/ui_theme.tres::c5837a56eca2121f2eb2aca86118cde3::1753325919::res://.godot/exported/133200997/export-96abbe5aa2ba7f92dd01937385ab518d-ui_theme.res
+res://src/scenes/entities/frogger/frogger.tscn::41e1929093550e37488f92939197ed70::1753327624::res://.godot/exported/133200997/export-b27540222ad299c6a71c482bbfb8b53f-frogger.scn
+res://src/scenes/entities/lilypad/lily_pad.tscn::f5128934c34eabb4bcd9bbe789897c77::1753327990::res://.godot/exported/133200997/export-ae4932ad1d3d9b6282ed7011d3ed3c00-lily_pad.scn
+res://src/scenes/entities/obstacles/cars/obstacle_car.tscn::420f7a3736f4f939fa2ee437ac7296ad::1753297597::res://.godot/exported/133200997/export-194c7864775e91fe8ff9089a1b07c217-obstacle_car.scn
+res://src/scenes/entities/obstacles/cat/obstacle_cat.tscn::a2ad2d0c67c11f97e765d10175bff31b::1753297597::res://.godot/exported/133200997/export-3a5bb296ed02d1b8fa71a1286ada3a57-obstacle_cat.scn
+res://src/scenes/entities/obstacles/log/log.tscn::e6d889f3811d524592f157605fff021e::1753285814::res://.godot/exported/133200997/export-a3d01a65d359b716dde4b8b8d7beca02-log.scn
+res://src/scenes/entities/obstacles/snake/snake.tscn::bef9b30e1707497e5abfd4217b44f8ee::1753297597::res://.godot/exported/133200997/export-ff695766fef3c3e9b0021e79ed3d8aa2-snake.scn
+res://src/scenes/entities/obstacles/turtle/turtle.tscn::43a6140a18994b4c396c2061d432ef8f::1753327624::res://.godot/exported/133200997/export-f341283a14c6aaad70431dbb97711eef-turtle.scn
+res://src/scenes/game/game.tscn::490acec8d64342ddfb993c3d6900d066::1753327624::res://.godot/exported/133200997/export-35a761aa3731da4fac6e1dd652072cf4-game.scn
+res://src/scenes/managers/obstacle_manager.tscn::039de9cb28bdf33b738894dd3a0257e0::1753297597::res://.godot/exported/133200997/export-af4a219a5525b11b34ab3bfc39620749-obstacle_manager.scn
+res://src/scenes/ui/pause_screen.tscn::87af39b8109a82af8f4631f6a2716062::1753327624::res://.godot/exported/133200997/export-84823251127614cd9ab88712d6aeacd5-pause_screen.scn
+res://src/scenes/ui/ui.tscn::8afc89b757ab1c8d04070e72f1998a2e::1753327624::res://.godot/exported/133200997/export-3f29ebafa37abceacf27118698e04262-ui.scn

@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://do2vkfhvphagv"]
+
+[ext_resource type="FontFile" uid="uid://cuat0dlra5pw0" path="res://assets/ui/fonts/manaspace/manaspc.ttf" id="1_nfw1y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nfw1y"]
+
+[resource]
+Button/fonts/font = ExtResource("1_nfw1y")
+Button/styles/focus = SubResource("StyleBoxEmpty_nfw1y")
+Label/constants/outline_size = 6
+Label/fonts/font = ExtResource("1_nfw1y")

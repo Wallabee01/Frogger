@@ -1,16 +1,1 @@
-res://src/scenes/game/game.tscn
 res://resources/tileset/tileset.tres
-res://src/scenes/entities/frogger/frogger.gd
-res://src/scenes/entities/frogger/frogger.tscn
-res://src/scenes/entities/obstacles/cars/obstacle_car.tscn
-res://src/scenes/managers/obstacle_manager.tscn
-res://src/scenes/entities/obstacles/cat/obstacle_cat.tscn
-res://src/scenes/entities/obstacles/turtle/turtle.tscn
-res://src/scenes/entities/obstacles/snake/snake.tscn
-res://src/scenes/entities/obstacles/log/log.tscn
-res://src/scenes/entities/lilypad/lily_pad.tscn
-res://src/scenes/game/game.gd
-res://src/scenes/entities/obstacles/log/log.gd
-res://src/scenes/entities/obstacles/turtle/turtle.gd
-res://src/autoloads/GameEvents.gd
-res://src/scenes/entities/lilypad/lily_pad.gd

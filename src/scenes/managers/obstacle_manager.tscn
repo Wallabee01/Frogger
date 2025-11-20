@@ -7,6 +7,5 @@ script = ExtResource("1_2rl5h")
 
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 5.0
-autostart = true
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

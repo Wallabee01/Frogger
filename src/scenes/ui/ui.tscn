@@ -2,7 +2,34 @@
 
 [ext_resource type="Theme" uid="uid://do2vkfhvphagv" path="res://resources/ui/themes/ui_theme.tres" id="1_m5lpg"]
 [ext_resource type="Script" uid="uid://bypbt08tr5s3c" path="res://src/scenes/ui/ui.gd" id="1_pt6fd"]
-[ext_resource type="AudioStream" uid="uid://pf5tkevfk0vx" path="res://assets/audio/sfx/question_003.ogg" id="2_icrss"]
+[ext_resource type="AudioStream" uid="uid://pf5tkevfk0vx" path="res://assets/audio/sfx/countdown.ogg" id="2_icrss"]
+
+[sub_resource type="Animation" id="Animation_icrss"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/ReadyLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Ready"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/ReadyLabel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_pt6fd"]
 resource_name = "start_delay"
@@ -51,33 +78,6 @@ tracks/2/keys = {
 "args": [0.0],
 "method": &"play"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_icrss"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MarginContainer/ReadyLabel:text")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["Ready"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("MarginContainer/ReadyLabel:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0atn2"]

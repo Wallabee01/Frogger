@@ -39,10 +39,11 @@ gravity_scale = 0.0
 script = ExtResource("1_dknrp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("RectangleShape2D_ccl63")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-position = Vector2(16, 4)
+position = Vector2(-16, -4)
 amount = 40
 texture = ExtResource("3_0pr8f")
 lifetime = 0.15

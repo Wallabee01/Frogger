@@ -1,30 +1,30 @@
 extends Area2D
 
-var is_full: bool = false
+var is_occupied: bool = false
 
-@onready var frogger_sprite_2d = $FroggerSprite2D
-@onready var audio_stream_player = %AudioStreamPlayer
-@onready var level_complete_stream_player = %LevelCompleteStreamPlayer
+@onready var frogger_sprite_2d: AnimatedSprite2D = $FroggerSprite2D
+@onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
+@onready var level_complete_stream_player: AudioStreamPlayer = %LevelCompleteStreamPlayer
 
 
 func _ready():
-	GameEvents.game_over.connect(_on_game_over)
-	GameEvents.level_complete.connect(_on_level_complete)
+	Events.game_over.connect(_on_game_over)
+	Events.level_complete.connect(_on_level_complete)
 
 
 func _on_body_entered(body):
-	if body.is_in_group("Frogger") && !is_full:
+	if body.is_in_group("Frogger") && !is_occupied:
 		audio_stream_player.pitch_scale = randf_range(0.8, 1.2)
 		audio_stream_player.play()
-		is_full = true
+		is_occupied = true
 		frogger_sprite_2d.visible = true
-		GameEvents.update_score(50)
-		GameEvents.update_lilypads(1)
+		GameManager.update_score(50)
+		GameManager.update_lilypads(1)
 		body.call_deferred("reset")
 
 
 func _reset():
-	is_full = false
+	is_occupied = false
 	frogger_sprite_2d.visible = false
 
 

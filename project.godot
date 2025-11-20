@@ -13,19 +13,23 @@ config_version=5
 config/name="Frogger"
 config/description="Frogger Clone"
 run/main_scene="uid://biepjc4tk26f"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 boot_splash/use_filter=false
 config/icon="uid://3tcrfkbaweue"
 
 [autoload]
 
-GameEvents="*res://src/autoloads/GameEvents.gd"
+Events="*res://src/autoloads/events.gd"
+GameManager="*res://src/autoloads/game_manager.gd"
+
+[debug]
+
+gdscript/warnings/unused_signal=0
 
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
-window/size/mode=3
 window/size/resizable=false
 window/size/window_width_override=1920
 window/size/window_height_override=1080

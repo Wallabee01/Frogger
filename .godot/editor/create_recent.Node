@@ -1,3 +1,5 @@
+Node
+GPUParticles2D
 VBoxContainer
 Button
 Label
@@ -8,7 +10,6 @@ AnimationPlayer
 Timer
 HBoxContainer
 AnimatedSprite2D
-GPUParticles2D
 Control
 MarginContainer
 Sprite2D

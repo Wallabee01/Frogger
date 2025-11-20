@@ -1,3 +1,5 @@
+res://src/scenes/world
+res://src/autoloads
 C:/Users/shens/Documents/Godot/Frogger/release
 res://assets/frogger
 res://resources/ui/themes
@@ -7,7 +9,6 @@ res://assets/lilypad
 res://assets/obstacles/cat
 res://assets/obstacles/snake
 res://assets/obstacles/turtle
-res://src/autoloads
 res://src/scenes/entities/lilypad
 res://src/scenes/entities/obstacles/log
 res://src/scenes/entities/obstacles/snake

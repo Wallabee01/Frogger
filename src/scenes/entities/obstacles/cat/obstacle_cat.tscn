@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://npa5phscgawb"]
 
-[ext_resource type="Script" uid="uid://cki1g7w4u2kn6" path="res://src/scenes/entities/obstacles/cat/obstacle_cat.gd" id="1_70raf"]
+[ext_resource type="Script" uid="uid://csgprnaootjck" path="res://src/scenes/entities/obstacles/obstacle.gd" id="1_70raf"]
 [ext_resource type="Texture2D" uid="uid://dc7ox0fgie21m" path="res://assets/obstacles/cat/cat_sheet.png" id="2_70raf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qm682"]
@@ -83,4 +83,5 @@ frame = 2
 frame_progress = 0.208509
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("RectangleShape2D_70raf")

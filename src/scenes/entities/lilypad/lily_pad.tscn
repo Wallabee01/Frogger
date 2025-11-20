@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dwxap3lt5i2jj" path="res://src/scenes/entities/lilypad/lily_pad.gd" id="1_s3khd"]
 [ext_resource type="Texture2D" uid="uid://bt3jvdq3jh1rn" path="res://assets/lilypad/lilypad_sheet.png" id="2_4qo4r"]
-[ext_resource type="AudioStream" uid="uid://b7uougst63ygr" path="res://assets/audio/sfx/confirmation_003.ogg" id="2_hh50s"]
+[ext_resource type="AudioStream" uid="uid://b7uougst63ygr" path="res://assets/audio/sfx/lilypad_score.ogg" id="2_hh50s"]
 [ext_resource type="Texture2D" uid="uid://dpwijr8n7w4yx" path="res://assets/frogger/frogger_bob.png" id="3_p57cj"]
-[ext_resource type="AudioStream" uid="uid://d0ron6kndq2ik" path="res://assets/audio/sfx/upgrade4.ogg" id="3_xxo3f"]
+[ext_resource type="AudioStream" uid="uid://d0ron6kndq2ik" path="res://assets/audio/sfx/level_complete.ogg" id="3_xxo3f"]
 
 [sub_resource type="Animation" id="Animation_4qo4r"]
 length = 0.001
@@ -165,6 +165,7 @@ libraries = {
 autoplay = "bob"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("RectangleShape2D_s3khd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

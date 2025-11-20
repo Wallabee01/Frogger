@@ -1,29 +1,25 @@
 extends CanvasLayer
 
-@onready var highscore_label = %HighscoreLabel
-@onready var lives_label = %LivesLabel
-@onready var score_label = %ScoreLabel
-@onready var time_label = %TimeLabel
-@onready var game_timer = %GameTimer
-@onready var start_delay_timer = %StartDelayTimer
-
-var game_start_wait_time: int
+@onready var score_label: Label = %ScoreLabel
+@onready var highscore_label: Label = %HighscoreLabel
+@onready var time_label: Label = %TimeLabel
+@onready var lives_label: Label = %LivesLabel
+@onready var game_timer: Timer = %GameTimer
+@onready var start_delay_timer: Timer = %StartDelayTimer
 
 
 func _ready():
-	GameEvents.lives_changed.connect(_on_lives_changed)
-	GameEvents.score_changed.connect(_on_score_changed)
-	GameEvents.high_score_changed.connect(_on_high_score_changed)
-	GameEvents.level_complete.connect(_on_level_complete)
-	GameEvents.game_over.connect(_on_game_over)
-	#TODO: Countdown to game start to populate obstacles
+	Events.lives_changed.connect(_on_lives_changed)
+	Events.score_changed.connect(_on_score_changed)
+	Events.high_score_changed.connect(_on_high_score_changed)
+	Events.level_complete.connect(_on_level_complete)
+	Events.game_over.connect(_on_game_over)
 	
-	game_start_wait_time = game_timer.wait_time
 	$AnimationPlayer.play("start_delay")
 	
-	update_score(GameEvents.score)
-	update_high_score(GameEvents.high_score)
-	update_lives(GameEvents.lives)
+	update_score(GameManager.score)
+	update_high_score(GameManager.high_score)
+	update_lives(GameManager.lives)
 	update_time(game_timer.wait_time)
 
 
@@ -44,7 +40,7 @@ func update_lives(num: int):
 	lives_label.text = "Lives: " + str(num)
 
 
-func update_time(num: int):
+func update_time(num: float):
 	time_label.text = "Time: %02d" % num
 
 
@@ -61,28 +57,30 @@ func _on_high_score_changed(num: int):
 
 
 func _on_start_delay_timer_timeout():
-	GameEvents.start_delay = false
+	GameManager.start_delay = false
 	game_timer.start()
 
 
 func _on_game_timer_timeout():
-	game_timer.wait_time = game_start_wait_time
-	GameEvents.game_over.emit()
-	GameEvents.reset_game()
+	game_timer.stop()
+	update_time(game_timer.wait_time)
+	Events.game_over.emit()
+	GameManager.reset_game()
 
 
 func _on_level_complete():
-	var time_left:int = game_timer.time_left
-	GameEvents.update_score(time_left * 10)
+	var time_left: int = int(game_timer.time_left)
+	GameManager.update_score(time_left * 10)
 	game_timer.stop()
 	game_timer.wait_time -= 30
 	start_delay_timer.start()
 	$AnimationPlayer.play("start_delay")
-	GameEvents.start_delay = true
+	GameManager.start_delay = true
 
 
 func _on_game_over():
-	game_timer.wait_time = game_start_wait_time
+	game_timer.stop()
+	update_time(game_timer.wait_time)
 	start_delay_timer.start()
 	$AnimationPlayer.play("start_delay")
-	GameEvents.start_delay = true
+	GameManager.start_delay = true
